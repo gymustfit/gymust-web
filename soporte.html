@@ -2,27 +2,16 @@
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Soporte · GyMust Fit</title><meta name="description" content="Soporte de GyMust Fit: contacto y preguntas frecuentes.">
 <link rel="stylesheet" href="style.css"></head><body>
-<header><a class="logo" href="index.html">GyMust <span>Fit</span></a><nav><a href="index.html">Inicio</a><a href="soporte.html" class=on>Soporte</a><a href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a></nav></header>
+<header><a class="logo" href="index.html">GyMust <span>Fit</span></a><nav><a href="index.html">Inicio</a><a href="soporte.html" class=on>Soporte</a><a href="contacto.html">Contacto</a><a href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a></nav></header>
 <main>
 <h1>Soporte</h1>
 <p class="sub">Si tienes un problema o una duda con GyMust Fit, escríbenos y te respondemos lo antes posible.</p>
-<div class="card"><b>Contacto:</b> <a href="mailto:soporte.gymustfit@gmail.com">soporte.gymustfit@gmail.com</a><br>
-<span style="color:var(--mut)">Escribe desde el correo de tu cuenta y cuéntanos qué ha pasado y en qué móvil.</span>
+<div class="card"><b>Contacto:</b> soporte.gymustfit@gmail.com<br>
+<span style="color:var(--mut)">Escríbenos desde la web y cuéntanos qué ha pasado y en qué móvil.</span>
 <div class="row">
-<a class="btn" href="mailto:soporte.gymustfit@gmail.com?subject=Soporte%20GyMust%20Fit&amp;body=Modelo%20de%20m%C3%B3vil%3A%0AVersi%C3%B3n%20de%20la%20app%3A%0A%C2%BFQu%C3%A9%20ha%20pasado%3F%0A">Enviar email</a>
+<a class="btn" href="contacto.html">Enviar mensaje</a>
 <a class="btn alt" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=soporte.gymustfit@gmail.com&amp;su=Soporte%20GyMust%20Fit" target="_blank" rel="noopener">Abrir en Gmail</a>
-<button class="btn alt" id="copiar" type="button" data-email="soporte.gymustfit@gmail.com">Copiar correo</button>
-</div>
-<p class="ok" id="ok" role="status"></p></div>
-<script>
-document.getElementById("copiar").addEventListener("click",function(){
-var e=this.getAttribute("data-email"),ok=document.getElementById("ok");
-function hecho(){ok.textContent="Correo copiado: "+e;}
-function falla(){ok.textContent="Copia este correo: "+e;}
-if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(e).then(hecho,falla);}
-else{try{var t=document.createElement("textarea");t.value=e;document.body.appendChild(t);t.select();document.execCommand("copy");document.body.removeChild(t);hecho();}catch(x){falla();}}
-});
-</script>
+</div></div>
 <h2>Preguntas frecuentes</h2>
 <h3>¿Cómo borro mi cuenta?</h3>
 <p>En la app: <b>Perfil → ☰ → Mis datos y privacidad → Borrar mi cuenta</b>. Se borra al momento, con todos tus datos y fotos. Si tienes Premium, la suscripción no se cancela sola: cancélala en tu cuenta de Apple o Google.</p>
@@ -35,5 +24,5 @@ else{try{var t=document.createElement("textarea");t.value=e;document.body.append
 <h3>Quiero ejercer mis derechos de privacidad</h3>
 <p>Escríbenos al correo de arriba. Lo tienes explicado en la <a href="privacidad.html">política de privacidad</a>.</p>
 </main>
-<footer>© 2026 GyMust Fit · Contacto: <a href="mailto:soporte.gymustfit@gmail.com">soporte.gymustfit@gmail.com</a><br><a href="privacidad.html">Política de privacidad</a> · <a href="terminos.html">Términos de uso</a></footer>
+<footer>© 2026 GyMust Fit · Contacto: soporte.gymustfit@gmail.com<br><a href="privacidad.html">Política de privacidad</a> · <a href="terminos.html">Términos de uso</a></footer>
 </body></html>

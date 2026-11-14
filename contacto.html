@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contacto · GyMust Fit</title><meta name="description" content="Contacta con el soporte de GyMust Fit.">
+<link rel="stylesheet" href="style.css"></head><body>
+<header><a class="logo" href="index.html">GyMust <span>Fit</span></a><nav><a href="index.html">Inicio</a><a href="soporte.html">Soporte</a><a href="contacto.html" class=on>Contacto</a><a href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a></nav></header>
+<main>
+<h1>Contacto</h1>
+<p class="sub">Escríbenos sin salir de la web y te respondemos lo antes posible al correo que nos indiques.</p>
+<div id="caja">
+<form id="f" novalidate>
+<label for="nombre">Tu nombre</label>
+<input type="text" id="nombre" name="name" autocomplete="name" required maxlength="80">
+<label for="email">Tu correo (para responderte)</label>
+<input type="email" id="email" name="email" autocomplete="email" required maxlength="120">
+<label for="mensaje">Tu mensaje</label>
+<textarea id="mensaje" name="message" required maxlength="3000" placeholder="Cuéntanos qué ha pasado, en qué móvil y qué versión de la app tienes."></textarea>
+<div class="hp" aria-hidden="true"><label>No rellenar<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
+<label class="chk"><input type="checkbox" id="acepto" required><span>He leído la <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a> y acepto que usen mis datos para responderme.</span></label>
+<button class="btn" type="submit" id="enviar">Enviar mensaje</button>
+<p class="err" id="err" role="alert"></p>
+</form>
+</div>
+<p class="sub">¿Prefieres usar tu correo? Escríbenos a soporte.gymustfit@gmail.com o <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=soporte.gymustfit@gmail.com&amp;su=Soporte%20GyMust%20Fit" target="_blank" rel="noopener">ábrelo en Gmail</a>.</p>
+<script>
+(function(){
+var f=document.getElementById("f"),err=document.getElementById("err"),btn=document.getElementById("enviar"),caja=document.getElementById("caja");
+f.addEventListener("submit",function(ev){
+ev.preventDefault();err.textContent="";
+var n=f.name.value.trim(),e=f.email.value.trim(),m=f.message.value.trim();
+if(f._honey.value){return;}
+if(!n||!e||!m){err.textContent="Rellena tu nombre, tu correo y el mensaje.";return;}
+if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)){err.textContent="El correo no parece válido.";return;}
+if(!document.getElementById("acepto").checked){err.textContent="Tienes que aceptar la política de privacidad.";return;}
+btn.disabled=true;btn.textContent="Enviando…";
+fetch("https://formsubmit.co/ajax/soporte.gymustfit@gmail.com",{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},
+body:JSON.stringify({name:n,email:e,message:m,_subject:"Mensaje desde la web de GyMust Fit",_template:"table"})})
+.then(function(r){if(!r.ok)throw new Error("http");return r.json();})
+.then(function(){caja.innerHTML='<div class="done"><b>¡Mensaje enviado!</b><br>Te responderemos lo antes posible al correo que nos has dado.</div>';})
+.catch(function(){btn.disabled=false;btn.textContent="Enviar mensaje";err.textContent="No se ha podido enviar. Inténtalo de nuevo o escríbenos a soporte.gymustfit@gmail.com.";});
+});
+})();
+</script>
+</main>
+<footer>© 2026 GyMust Fit · Contacto: soporte.gymustfit@gmail.com<br><a href="privacidad.html">Política de privacidad</a> · <a href="terminos.html">Términos de uso</a></footer>
+</body></html>

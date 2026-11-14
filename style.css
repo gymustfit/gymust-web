@@ -27,3 +27,13 @@ footer a{color:var(--mut)}
 .btn.alt{background:transparent;border:1px solid var(--acc);color:var(--acc)}
 button.btn{font:inherit;font-weight:600;cursor:pointer;border:1px solid var(--acc)}
 .ok{color:#30D158;min-height:1.4em;margin:6px 0 0;font-size:14px}
+
+label{display:block;margin:16px 0 6px;font-weight:600}
+input[type=text],input[type=email],textarea{width:100%;background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:10px;padding:12px;font:inherit}
+input:focus,textarea:focus{outline:2px solid var(--acc);border-color:var(--acc)}
+textarea{min-height:150px;resize:vertical}
+.chk{display:flex;gap:10px;align-items:flex-start;margin:16px 0;font-weight:400}
+.chk input{margin-top:5px}
+.hp{position:absolute;left:-9999px;height:0;width:0;overflow:hidden}
+.err{color:#FF375F;min-height:1.4em;margin:8px 0 0;font-size:15px}
+.done{background:var(--card);border:1px solid #30D158;border-radius:14px;padding:18px 20px;margin:16px 0}
