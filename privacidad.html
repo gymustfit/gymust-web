@@ -12,7 +12,7 @@
 <p>GyMust Fit es solo para <b>mayores de 18 años</b>. Lo comprobamos con tu fecha de nacimiento al registrarte.</p>
 <h2>3. Qué datos tratamos, para qué y por qué</h2>
 <table><tr><th>Datos</th><th>Para qué</th><th>Base legal</th></tr>
-<tr><td>Correo, contraseña (cifrada), nombre. Si entras con Google: correo, nombre y foto de tu cuenta de Google.</td><td>Crear tu cuenta y que puedas entrar.</td><td>Contrato</td></tr>
+<tr><td>Correo, contraseña (cifrada), nombre. Si entras con Google: correo, nombre y foto de tu cuenta de Google. Si entras con Apple (iPhone): un identificador de tu cuenta de Apple, tu correo (o la dirección privada de Apple si eliges ocultarlo) y, solo la primera vez, tu nombre si lo compartes. Para poder desconectar tu cuenta de Apple cuando borres la de GyMust Fit, guardamos además un token de Apple que la app no puede leer.</td><td>Crear tu cuenta y que puedas entrar.</td><td>Contrato</td></tr>
 <tr><td>Sexo, fecha de nacimiento, altura, peso, objetivo, experiencia, días de entreno, material y prioridades; foto de perfil (opcional).</td><td>Adaptar rutinas, rangos y calcular tus calorías y macros.</td><td>Contrato</td></tr>
 <tr><td>Rutinas, entrenos, series, récords, rachas y fotos de entrenos.</td><td>Guardar tu historial y calcular rangos y progreso. Las fotos están en un almacén privado que solo ves tú.</td><td>Contrato</td></tr>
 <tr><td><b>Datos de salud:</b> comidas, agua, peso, dietas, productos guardados y, si los pones, tus lesiones o molestias.</td><td>Apuntar tu día, calcular objetivos y mostrar tu progreso.</td><td><b>Consentimiento expreso</b></td></tr>
@@ -37,18 +37,20 @@
 <tr><td>Supabase (servidores en Irlanda, UE)</td><td>Base de datos, inicio de sesión, almacén de fotos y servidor.</td></tr>
 <tr><td>Google (Gemini API)</td><td>Funciones con IA (apartado 5).</td></tr>
 <tr><td>Google</td><td>Solo si eliges "Entrar con Google".</td></tr>
+<tr><td>Apple (Sign in with Apple)</td><td>Solo si eliges "Continuar con Apple": comprobar tu identidad al entrar y, al borrar la cuenta, desconectarla de Apple.</td></tr>
 <tr><td>Open Food Facts</td><td>Buscar productos y códigos de barras. Solo recibe lo que buscas, no datos de tu cuenta.</td></tr>
 <tr><td>Sentry (servidores en la UE, Alemania)</td><td>Informes de errores, sin tu nombre, correo ni datos de cuenta, sin capturas de pantalla.</td></tr>
 <tr><td>Servicio de envío de correos</td><td>Correos de recuperar contraseña.</td></tr>
 <tr><td>FormSubmit (formulario de contacto de esta web)</td><td>Entregar a nuestro correo el mensaje que envías desde la web.</td></tr>
 <tr><td>Apple y Google (tiendas)</td><td>Descarga de la app, valoraciones y pagos de Premium.</td></tr></table>
 <h2>7. Transferencias fuera de la UE</h2>
-<p>Tus datos están alojados en la UE. Si algún proveedor los trata fuera de la UE, lo hace con las garantías del RGPD, como las Cláusulas Contractuales Tipo de la Comisión Europea o el Marco de Privacidad de Datos UE-EE. UU.</p>
+<p>Tus datos están alojados en la UE. Si algún proveedor los trata fuera de la UE, lo hace con las garantías del RGPD, como las Cláusulas Contractuales Tipo de la Comisión Europea o el Marco de Privacidad de Datos UE-EE. UU. Si entras con Apple, esa empresa es de EE. UU.: nuestro servidor le envía el código de acceso y el token de tu cuenta para entrar y para desconectarla al borrarla.</p>
 <h2>8. Cuánto tiempo los guardamos</h2>
 <ul>
 <li>Mientras tengas la cuenta. Si la borras, se eliminan al momento tus datos y fotos.</li>
 <li>Los datos de salud, mientras mantengas el permiso. Si lo retiras, se borran en ese momento.</li>
 <li>La fecha en que aceptas el permiso de IA, mientras tengas la cuenta. Se borra al borrar la cuenta.</li>
+<li>El token de Apple (solo si entraste con Apple), mientras tengas la cuenta. Al borrarla se revoca primero en Apple y después se borra.</li>
 <li>Los intentos de usar la IA para frenar abusos, solo 2 días.</li>
 <li>Los informes de errores y las copias de seguridad de los proveedores se eliminan solos pasado un tiempo limitado.</li>
 <li>Las fotos de etiquetas y platos para la IA no se guardan.</li>
@@ -56,7 +58,7 @@
 <li>Si la ley nos obliga a guardar algo, lo guardamos solo el tiempo que ella diga.</li></ul>
 <h2>9. Tus derechos</h2>
 <p>Puedes pedir acceso, rectificación, supresión, limitación, oposición y portabilidad de tus datos, y retirar tu consentimiento (el de los datos de salud y el permiso de IA) cuando quieras. Es gratis y respondemos en un máximo de un mes.</p>
-<ul><li><b>Borrar tu cuenta:</b> en la app, Perfil → ☰ → Mis datos y privacidad → Borrar mi cuenta.</li>
+<ul><li><b>Borrar tu cuenta:</b> en la app, Perfil → ☰ → Mis datos y privacidad → Borrar mi cuenta. Si entraste con Apple, también se desconecta tu cuenta de Apple.</li>
 <li><b>Otros derechos:</b> escribe a soporte.gymustfit@gmail.com desde el correo de tu cuenta.</li>
 <li><b>Reclamar:</b> ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es">www.aepd.es</a>).</li></ul>
 <h2>10. Cálculos automáticos</h2>
@@ -64,7 +66,7 @@
 <h2>11. Lo que se guarda solo en tu móvil</h2>
 <p>Tus pasos (leídos del podómetro), el entreno en curso, notas de ejercicios, avisos, recordatorios, historial de chats con los asistentes y copias de fotos y productos escaneados para que la app cargue rápido. También guarda una copia de lo último que cargaste de Entreno (historial y días entrenados), Rutinas, Rangos y del resumen de hoy en Inicio (calorías, agua, pasos y objetivos), para que la app abra al instante mientras llegan los datos actuales. Esa copia solo está en tu móvil, separada por cuenta, y no se envía a ningún sitio. Se borra al cerrar sesión, borrar la cuenta o desinstalar la app.</p>
 <h2>12. Seguridad</h2>
-<p>Cada usuario solo puede ver y cambiar sus propios datos. Las conexiones van cifradas, las fotos están en almacén privado y la sesión se guarda cifrada en el móvil. Las claves de la IA solo están en nuestro servidor.</p>
+<p>Cada usuario solo puede ver y cambiar sus propios datos. Las conexiones van cifradas, las fotos están en almacén privado y la sesión se guarda cifrada en el móvil. Las claves de la IA y la de Apple solo están en nuestro servidor, nunca dentro de la app.</p>
 <h2>13. Permisos del móvil</h2>
 <ul><li><b>Cámara:</b> leer códigos de barras, hacer fotos de entreno, de etiqueta o de plato. Solo cuando tú lo usas.</li>
 <li><b>Fotos:</b> elegir fotos de tu galería. Solo cuando tú lo usas.</li>

@@ -37,3 +37,9 @@ textarea{min-height:150px;resize:vertical}
 .hp{position:absolute;left:-9999px;height:0;width:0;overflow:hidden}
 .err{color:#FF375F;min-height:1.4em;margin:8px 0 0;font-size:15px}
 .done{background:var(--card);border:1px solid #30D158;border-radius:14px;padding:18px 20px;margin:16px 0}
+
+.store{display:inline-flex;flex-direction:column;border:1px solid var(--line);background:var(--card);border-radius:12px;padding:8px 22px;margin:0 0 6px;line-height:1.25}
+.store-small{font-size:12px;color:var(--mut)}
+.store-big{font-size:22px;font-weight:700;color:var(--fg)}
+.store-soon{font-size:12px;color:var(--acc);margin-top:2px}
+.store-badge img{display:block}
